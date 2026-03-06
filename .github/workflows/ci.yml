@@ -1,4 +1,4 @@
-name: ci-cd
+name: CI
 
 on:
   push:
@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - name: checkout
-        uses: action/checkout@v1
-      - name: setup
-        uses: action/setup@v1
+        uses: actions/checkout@v1
+      - name: Setup Java
+        uses: actions/setup-java@v1
         with:
           distribution: 'temurin'
         java-version: '17'
