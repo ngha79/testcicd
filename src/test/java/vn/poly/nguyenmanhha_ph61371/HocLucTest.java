@@ -1,5 +1,6 @@
 package vn.poly.nguyenmanhha_ph61371;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,16 +26,16 @@ class HocLucTest {
 
     @Test
     public void kiemTraHocLucHopLe_BienGioi() {
-        assertEquals("Gioi", hocLuc.kiemTraHocLuc(7));
+        assertEquals("Giỏi", hocLuc.kiemTraHocLuc(7));
     }
 
     @Test
     public void kiemTraHocLucHopLe_BienTrungBinh() {
-        assertEquals("Trung bình", hocLuc.kiemTraHocLuc(7));
+        assertEquals("Trung bình", hocLuc.kiemTraHocLuc(5));
     }
 
     @Test
     public void kiemTraHocLucKhongHopLe() {
-        assertEquals("Xuất sắc", hocLuc.kiemTraHocLuc(11));
+        Assertions.assertThrows(ArithmeticException.class, ()->hocLuc.kiemTraHocLuc(11));
     }
 }

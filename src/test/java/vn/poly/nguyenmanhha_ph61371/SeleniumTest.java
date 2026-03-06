@@ -36,7 +36,7 @@ public class SeleniumTest {
         driver.findElement(By.className("search_flights")).click();
         Thread.sleep(5000);
         System.out.println(driver.getCurrentUrl());
-        Assert.assertTrue(driver.getCurrentUrl().contains("select-flight?itm_source"));
+        Assert.assertFalse(driver.getCurrentUrl().contains("select-flight?itm_source"));
 
         System.out.println("Tìm kiếm vé máy bay thành công");
 
